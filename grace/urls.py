@@ -19,5 +19,7 @@ from . import views
 urlpatterns = [
     path('', views.index),
     path('recommend/', views.RecommendList.as_view()),
-    path('logout/', views.logout, name='logout')
+    path('logout/', views.logout, name='logout'),
+    path('myPage/', views.myPage, name='myPage'),
+    path('tutor/', views.tutor, name='tutor')
 ]

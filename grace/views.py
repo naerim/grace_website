@@ -24,4 +24,12 @@ def index(request):
 
 def logout(request):
     auth.logout(request)
-    return redirect('/grace/')
+    return redirect('../')
+
+
+def myPage(request):
+    return render(request, 'grace/myPage.html')
+
+
+def tutor(request):
+    return render(request, 'grace/tutor.html')
