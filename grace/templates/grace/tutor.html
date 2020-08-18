@@ -1,0 +1,66 @@
+{% extends 'grace/navbar.html' %}
+{% load static %}
+
+{% block content %}
+
+
+    <h1>튜터 등록</h1>
+    <hr/>
+
+    <form>
+        <fieldset>
+            <div class="form-group row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="admin@gmail.com">
+                </div>
+            </div>
+            <hr/>
+            <div class="form-group" style="margin-top: 50px; width: 500px">
+                <label for="exampleInputEmail1">이메일</label>
+                <input type="email" class="form-control"  aria-describedby="emailHelp" placeholder="이메일을 입력하세요">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputFile">별명</label>
+                <input type="password" class="form-control"  placeholder="">
+            </div>
+            <hr/>
+            <div class="form-group" style="margin-top: 50px">
+                <label for="exampleInputFile">학력</label>
+                <input type="email" class="form-control"  aria-describedby="emailHelp" placeholder="ㅇㅇ대학교 재학생, 휴학생">
+            </div>
+            <div class="form-group">
+                <label for="exampleTextarea">자격증</label>
+                <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="토익900, GTQ1급 등"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="exampleTextarea">소셜미디어</label>
+                <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="인스타그램, 페이스북 등"></textarea>
+            </div>
+            <hr/>
+
+            <div class="form-group" style="margin-top: 50px">
+                <label for="exampleSelect1">수업분야</label>
+                <select class="form-control" id="exampleSelect1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="form-group" style="margin-bottom: 50px">
+                <label for="exampleInputFile">추가로 원하는 수업분야</label>
+                <input type="email" class="form-control"  aria-describedby="emailHelp" >
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </fieldset>
+    </form>
+
+
+
+
+
+{% endblock %}
