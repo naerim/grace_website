@@ -1,0 +1,100 @@
+{% extends 'grace/navbar.html' %}
+{% load static %}
+
+{% block content %}
+
+    <h1>수업 신청</h1>
+    <hr/>
+    <div class="row" style="margin-bottom: 2rem;">
+        <div class="col-lg-4">
+
+            <div class="card mb-3">
+                <h3 class="card-header">Card header</h3>
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+                </div>
+                <img style="height: 200px; width: 100%; display: block;" src="https://cdn.pixabay.com/photo/2015/06/14/15/42/traffic-sign-809006_1280.jpg" alt="Card image">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+                <div class="card-footer text-muted">
+                    2 days ago
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-8">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#place">장소/일시</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#apply">신청서</a>
+                </li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade show active" id="place">
+                    <h6 style="margin-top: 50px">원하시는 수업일정을 선택해주세요</h6>
+                    <hr/>
+                    <div class="form-group" style="margin-top: 50px">
+                        <div class="custom-control custom-radio" style="margin-bottom: 10px">
+                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked="">
+                            <label class="custom-control-label" for="customRadio1">상세 정보</label>
+                        </div>
+                        <div class="custom-control custom-radio" style="margin-bottom: 10px">
+                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio2">08.29(토) 11:30~16:00 | 강남</label>
+                        </div>
+                        <div class="custom-control custom-radio" style="margin-bottom: 10px">
+                            <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio3">08.29(토) 11:30~16:00 | 강남</label>
+                        </div>
+                        <div class="custom-control custom-radio" style="margin-bottom: 10px">
+                            <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio4">08.29(토) 11:30~16:00 | 강남</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="apply">
+                    <h6 style="margin-top: 50px">레벨</h6>
+                    <hr/>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-secondary">입문자</button>
+                        <button type="button" class="btn btn-secondary">초/중급자</button>
+                        <button type="button" class="btn btn-secondary">고급자</button>
+                    </div>
+                    <h6 style="margin-top: 50px">경력</h6>
+                    <hr/>
+                    <div class="form-group">
+                        <select class="form-control" id="exampleSelect1">
+                            <option>dd</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <h6 style="margin-top: 50px">튜터에게 전하는 말</h6>
+                    <hr/>
+                    <div class="form-group">
+                        <textarea class="form-control" id="exampleTextarea" rows="3" ></textarea>
+                    </div>
+                    <button type="submit" style="margin-top: 20px" class="btn btn-primary" onclick="alert('신청되었습니다!.');">Submit</button>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+{% endblock %}
