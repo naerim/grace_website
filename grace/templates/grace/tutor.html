@@ -6,58 +6,60 @@
 
     <h1>튜터 등록</h1>
     <hr/>
-
-    <form>
-        <fieldset>
-            <div class="form-group row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-                <div class="col-sm-10">
-                    <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="guru@gmail.com">
+    <div class="jumbotron" style="padding:20px; margin-top: 30px">
+        <form>
+            <fieldset>
+                <div class="form-group row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="guru@gmail.com">
+                    </div>
                 </div>
-            </div>
-            <hr/>
-            <div class="form-group" style="margin-top: 50px; width: 500px">
-                <label for="exampleInputEmail1">이메일</label>
-                <input type="email" class="form-control"  aria-describedby="emailHelp" placeholder="이메일을 입력하세요">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-            <div class="form-group" style="width: 500px">
-                <label for="exampleInputFile">별명</label>
-                <input class="form-control"  placeholder="">
-            </div>
-            <hr/>
-            <div class="form-group" style="margin-top: 50px">
-                <label for="exampleInputFile">학력</label>
-                <input type="email" class="form-control"  aria-describedby="emailHelp" placeholder="ㅇㅇ대학교 재학생, 휴학생">
-            </div>
-            <div class="form-group">
-                <label for="exampleTextarea">자격증</label>
-                <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="토익900, GTQ1급 등"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="exampleTextarea">소셜미디어</label>
-                <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="인스타그램, 페이스북 등"></textarea>
-            </div>
-            <hr/>
+                <hr/>
+                <div class="form-group" style="margin-top: 50px; width: 500px">
+                    <label for="exampleInputEmail1">이메일</label>
+                    <input type="email" class="form-control"  aria-describedby="emailHelp" placeholder="이메일을 입력하세요" style="background-color: white">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group" style="width: 500px">
+                    <label for="exampleInputFile">별명</label>
+                    <input class="form-control"  placeholder="별명을 입력하세요" style="background-color: white">
+                </div>
+                <hr/>
+                <div class="form-group" style="margin-top: 50px">
+                    <label for="exampleInputFile">학력</label>
+                    <input type="email" class="form-control"  aria-describedby="emailHelp" placeholder="ㅇㅇ대학교 재학생, 휴학생" style="background-color: white">
+                </div>
+                <div class="form-group">
+                    <label for="exampleTextarea">자격증</label>
+                    <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="토익900, GTQ1급 등" style="background-color: white"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="exampleTextarea">소셜미디어</label>
+                    <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="인스타그램, 페이스북 등" style="background-color: white"></textarea>
+                </div>
+                <hr/>
 
-            <div class="form-group" style="margin-top: 50px">
-                <label for="exampleSelect1">수업분야</label>
-                <select class="form-control" id="exampleSelect1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </div>
-            <div class="form-group" style="margin-bottom: 50px">
-                <label for="exampleInputFile">추가로 원하는 수업분야</label>
-                <input type="email" class="form-control"  aria-describedby="emailHelp" >
-            </div>
-
-            <button type="submit" class="btn btn-primary"  style="margin-bottom: 30px" onclick="alert('제출되었습니다.');">Submit</button>
-        </fieldset>
-    </form>
+                <div class="form-group" style="margin-top: 50px">
+                    <label for="exampleSelect1">수업분야</label>
+                    <select class="form-control" id="exampleSelect1" style="background-color: white">
+                        <option>건강</option>
+                        <option>뷰티</option>
+                        <option>포토샵/일러스트</option>
+                        <option>음악</option>
+                        <option>영상</option>
+                        <option>외국어</option>
+                        <option>요리/베이킹</option>
+                    </select>
+                </div>
+                <div class="form-group" style="margin-bottom: 50px">
+                    <label for="exampleInputFile">추가로 원하는 수업분야</label>
+                    <input type="email" class="form-control"  aria-describedby="emailHelp" style="background-color: white">
+                </div>
+                <button type="submit" class="btn btn-primary"  style="margin-bottom: 30px" onclick="alert('제출되었습니다.');">Submit</button>
+            </fieldset>
+        </form>
+    </div>
 
 
 
