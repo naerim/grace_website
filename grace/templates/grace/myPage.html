@@ -1,13 +1,86 @@
-
 {% extends 'grace/navbar.html' %}
 {% load static %}
 
 {% block content %}
 
-    <h1>MY PAGE</h1>
+    <h1>마이페이지</h1>
     <hr/>
-    <div>{{ user }}</div>
 
+    <div class="row" style="margin-bottom: 2rem;">
+        <div class="col-lg-3" >
+            <div class="card mb-3">
+                <h3 class="card-header">{{ user }} 님</h3>
+                <img width="250" src="https://i.imgur.com/slohUZ8.png" style="padding: 10px">
+                <div class="card-body">
+                    <p class="card-text">
+                        <span class="badge badge-light">프로필 사진</span>
+                    <hr/>
+                    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                    <small id="fileHelp" class="form-text text-muted">개인 정보 보호를 위해 이미지는 신중히 올려 주세요.</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8" style="margin-left: 50px; margin-top: 20px">
+            <h5>{{ user }}님 안녕하세요!
+                <br/><strong>GRACE</strong>를 통해 지식을 공유하고, 더 나은 내일을 만들어 보세요.</h5>
+            <div class="jumbotron" style="padding:20px; margin-top: 30px">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#lecture">내강좌</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#info">내정보</a>
+                    </li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade show active" id="lecture">
+                        <p style="padding-top: 20px">
+                            <span class="badge badge-pill badge-dark">수강 중인 강좌</span>
+                        </p>
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th scope="col">카테고리</th>
+                                <th scope="col">수강강좌</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="table-secondary">
+                                <th scope="row">뷰티</th>
+                                <td colspan="3">퍼스널 컬러 진단</td>
+                            </tr>
+                            <tr class="table-secondary">
+                                <th scope="row">건강</th>
+                                <td colspan="3">PT</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="info">
+                        <form>
+                            <fieldset>
+                                <div class="form-group">
+                                    <span class="badge badge-light">닉네임</span>
+                                    <br><br><input type="text" class="form-control" placeholder="{{ user }}" id="inputDefault" style="background-color: white">
+                                </div>
+                                <hr/>
+                                <div class="form-group">
+                                    <span class="badge badge-light" style="margin-top: 10px">내 소개</span>
+                                    <br><br><textarea class="form-control" placeholder="GRACE를 통해 지식을 공유하고, 더 나은 내일을 만들어 보세요." id="exampleTextarea" rows="3" style="background-color: white"></textarea>
+                                </div>
+
+                                <center>
+                                    <button type="submit" class="btn btn-primary" onclick="alert('저장되었습니다.');">저장</button>
+                                </center>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
