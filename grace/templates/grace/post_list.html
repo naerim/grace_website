@@ -1,0 +1,55 @@
+{% extends 'grace/navbar.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <a href="/category/"><button type="button" class="btn btn-secondary">전체</button></a>
+        <a href="/category/health/"><button type="button" class="btn btn-secondary">건강</button></a>
+        <a href="/category/beauty/"><button type="button" class="btn btn-secondary">뷰티</button></a>
+        <a href="/category/photoshop/"><button type="button" class="btn btn-secondary">포토샵/일러스트</button></a>
+        <a href="/category/music/"><button type="button" class="btn btn-secondary">음악</button></a>
+        <a href="/category/video/"><button type="button" class="btn btn-secondary">영상</button></a>
+        <a href="/category/foreign/"><button type="button" class="btn btn-secondary">외국어</button></a>
+        <a href="/category/baking/"><button type="button" class="btn btn-secondary">요리/베이킹</button></a>
+    </div>
+    <hr/>
+
+    <div class="row" style="margin-top: 50px">
+        {% if object_list %}
+
+            {% for p in object_list %}
+                <div class="col-lg-4">
+                    <a href="/introduce/"><div class="card bg-secondary mb-3" style="max-width: 20rem;">
+                        <div class="card-header">{{p.category}}</div>
+                        <div class="card-body">
+                            <h4 class="card-title">{{p.title}}</h4>
+                            <img class="card-img" src="{{ p.head_image.url }}" alt="card_img" style="margin-bottom: 30px"/>
+                            <p class="card-text">{{ p.content }}</p>
+                        </div>
+                    </div></a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="alert alert-dismissible alert-info" style="width: 100%; text-align: center">
+
+                <h4 class="alert-heading">NO DATA!</h4>
+                <p class="mb-0">Contact the tutor right now~</p>
+            </div>
+        {% endif %}
+
+    </div>
+
+{% endblock %}
+
+{#            {% if r.title == 'health' %}#}
+{#                <div class="col-lg-4">#}
+{#                    <div class="card bg-secondary mb-3" style="max-width: 20rem;">#}
+{#                        <div class="card-header">{{r.title}}</div>#}
+{#                        <div class="card-body">#}
+{#                            <h4 class="card-title">{{r.title}}</h4>#}
+{#                            <p class="card-text">{{ r.content }}</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            {% endif %}#}
