@@ -1,0 +1,133 @@
+{% extends 'grace/navbar.html' %}
+{% load static %}
+
+{% block content %}
+    <h1>수업 신청</h1>
+    <hr/>
+    <div class="row" style="margin-bottom: 2rem;">
+        <div class="col-lg-3">
+
+            <div class="card mb-3">
+                <h3 class="card-header">튜터정보</h3>
+                <div class="card-body">
+                    <h5 class="card-title">☑ 퍼스널컬러 프로그램 </h5>
+                    <h6 class="card-subtitle text-muted">✔ Be My Color!</h6>
+                </div>
+                <style>
+                    img { display: block; margin: 0px auto; }
+                </style>
+                <img style=" height: 250px; width: 80%; display: block;" src="https://search.pstatic.net/common?type=a&size=120x150&quality=95&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2Fportrait%2F202006%2F20200618170838231.jpg" alt="Card image">
+                <div class="card-body">
+                    <p class="card-text">
+                        ✔[자격사항]
+                    <hr/>
+                    npo 국제 퍼스널컬러 자격증 <br>
+                    이미지메이킹 강사 <br>
+                    뷰티유투버 경력有<br>
+                    서비스능력 개발지도사 <br>
+                    레크리에이션 지도사
+                    </p>
+                </div>
+                <div class="card-footer text-muted">
+                    인스타 @guru_himdeulda<br>
+                    카카오채널 @구루퍼스널
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-8">
+            <div class="jumbotron" style="padding-top: 20px">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#introduce">수업소개</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#place">장소/일시</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#apply">신청서</a>
+                    </li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade show active" id="introduce">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" style="margin-bottom: 50px">✔수업소개
+                                <hr/>
+                                1. 퍼스널컬러 심플<br>
+                                2. 퍼스널컬러 베이직<br>
+                                3. 퍼스널컬러 디테일<br>
+                                4. 퍼스널컬러 업그레이드</li>
+                            <li class="list-group-item" style="margin-bottom: 50px">✔ 이런 분께 강력추천!
+                                <hr/>
+
+                                - 나에게 어울리는 컬러를 찾고 싶은 분<br>
+                                - 내 매력을 한층 더 업그레이드 하고 싶은 분<br>
+                                - 좀 더 현명하게 색을 활용하고 싶은 분<br>
+                                - 데일리 메이크업/스타일링에 적용하고 싶은 분<br>
+                                - 나에게 어울리는 인생 립스틱을 찾고싶은 분<br>
+                                - 중요한 날을 위해 컬러컨설팅이 필요하신분</li>
+                            <li class="list-group-item">✔ 원데이 클래스</li>
+                        </ul>
+
+                    </div>
+                    <div class="tab-pane fade" id="place">
+                        <h6 style="margin-top: 50px">원하시는 수업일정을 선택해주세요</h6>
+                        <hr/>
+                        <div class="form-group" style="margin-top: 50px">
+                            <div class="custom-control custom-radio" style="margin-bottom: 10px">
+
+                                <label class="custom-control-label" >상세장소 : 협의 후 결정</label>
+                            </div>
+                            <div class="custom-control custom-radio" style="margin-bottom: 10px">
+                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked="">
+                                <label class="custom-control-label" for="customRadio1">08.25(화) 19:00~22:00 | 강남</label>
+                            </div>
+                            <div class="custom-control custom-radio" style="margin-bottom: 10px">
+                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2">08.25(화) 14:00~16:00 | 용산</label>
+                            </div>
+                            <div class="custom-control custom-radio" style="margin-bottom: 10px">
+                                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio3">08.28(금) 14:00~16:00 | 용산</label>
+                            </div>
+                            <div class="custom-control custom-radio" style="margin-bottom: 10px">
+                                <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio4">09.05(토) 13:00~16:00 | 온라인</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="apply">
+                        <h6 style="margin-top: 50px">레벨</h6>
+                        <hr/>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">입문자</button>
+                            <button type="button" class="btn btn-secondary">초/중급자</button>
+                            <button type="button" class="btn btn-secondary">고급자</button>
+                        </div>
+                        <h6 style="margin-top: 50px">경력</h6>
+                        <hr/>
+                        <div class="form-group">
+                            <select class="form-control" id="exampleSelect1" style="background-color: white">
+                                <option>0개월</option>
+                                <option>6개월이내</option>
+                                <option>6개월-1년</option>
+                                <option>1-3년</option>
+                                <option>3년이상</option>
+                            </select>
+                        </div>
+                        <h6 style="margin-top: 50px">튜터에게 전하는 말</h6>
+                        <hr/>
+                        <div class="form-group">
+                            <textarea class="form-control" id="exampleTextarea" rows="3" style="background-color: white"></textarea>
+                        </div>
+                        <button type="submit" style="margin-top: 20px" class="btn btn-primary" onclick="alert('신청되었습니다.');">Submit</button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
