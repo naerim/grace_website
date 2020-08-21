@@ -1,8 +1,10 @@
+<!-- 추천 페이지 -->
 {% extends 'grace/navbar.html' %}
 {% load static %}
 
 {% block content %}
 
+    <!-- 카테고리 버튼 -->
     <div class="btn-group" role="group" aria-label="Basic example">
         <a href="/category/"><button type="button" class="btn btn-secondary">전체</button></a>
         <a href="/category/health/"><button type="button" class="btn btn-secondary">건강</button></a>
@@ -15,9 +17,10 @@
     </div>
     <hr/>
 
+    <!-- 강의 데이터 -->
+    <!-- 해당 카테고리에 해당하는 강좌가 있다면 해당 페이지로 이동하면서 강좌들을 보여준다 -->
     <div class="row" style="margin-top: 50px">
         {% if object_list %}
-
             {% for p in object_list %}
                 <div class="col-lg-4">
                     <a href="/introduce/">
@@ -32,13 +35,14 @@
                     </a>
                 </div>
             {% endfor %}
+
+        <!-- 강좌가 없다면 No Data를 보여줌 -->
         {% else %}
             <div class="alert alert-dismissible alert-info" style="width: 100%; text-align: center">
                 <h4 class="alert-heading">NO DATA!</h4>
                 <p class="mb-0">Contact the tutor right now~</p>
             </div>
         {% endif %}
-
     </div>
 
 {% endblock %}

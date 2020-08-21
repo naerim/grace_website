@@ -1,3 +1,4 @@
+<!-- 신청 페이지 -->
 {% extends 'grace/navbar.html' %}
 {% load static %}
 
@@ -5,10 +6,15 @@
     <h1>수업 신청</h1>
     <hr/>
     <div class="row" style="margin-bottom: 2rem;">
-        <div class="col-lg-3">
 
+        <!-- 튜터 정보 -->
+        <div class="col-lg-3">
             <div class="card mb-3">
+
+                <!-- card header -->
                 <h3 class="card-header">튜터정보</h3>
+
+                <!-- card body -->
                 <div class="card-body">
                     <h5 class="card-title">☑ 퍼스널컬러 프로그램 </h5>
                     <h6 class="card-subtitle text-muted">✔ Be My Color!</h6>
@@ -28,13 +34,16 @@
                     레크리에이션 지도사
                     </p>
                 </div>
+
+                <!-- card footer -->
                 <div class="card-footer text-muted">
                     인스타 @guru_himdeulda<br>
                     카카오채널 @구루퍼스널
                 </div>
             </div>
-
         </div>
+
+        <!-- 강좌 신청 탭 -->
         <div class="col-lg-8">
             <div class="jumbotron" style="padding-top: 20px">
                 <ul class="nav nav-tabs">
@@ -48,6 +57,8 @@
                         <a class="nav-link" data-toggle="tab" href="#apply">신청서</a>
                     </li>
                 </ul>
+
+                <!-- 수업 소개 -->
                 <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade show active" id="introduce">
                         <ul class="list-group list-group-flush">
@@ -59,7 +70,6 @@
                                 4. 퍼스널컬러 업그레이드</li>
                             <li class="list-group-item" style="margin-bottom: 50px">✔ 이런 분께 강력추천!
                                 <hr/>
-
                                 - 나에게 어울리는 컬러를 찾고 싶은 분<br>
                                 - 내 매력을 한층 더 업그레이드 하고 싶은 분<br>
                                 - 좀 더 현명하게 색을 활용하고 싶은 분<br>
@@ -68,14 +78,14 @@
                                 - 중요한 날을 위해 컬러컨설팅이 필요하신분</li>
                             <li class="list-group-item">✔ 원데이 클래스</li>
                         </ul>
-
                     </div>
+
+                    <!-- 장소/일시 -->
                     <div class="tab-pane fade" id="place">
                         <h6 style="margin-top: 50px">원하시는 수업일정을 선택해주세요</h6>
                         <hr/>
                         <div class="form-group" style="margin-top: 50px">
                             <div class="custom-control custom-radio" style="margin-bottom: 10px">
-
                                 <label class="custom-control-label" >상세장소 : 협의 후 결정</label>
                             </div>
                             <div class="custom-control custom-radio" style="margin-bottom: 10px">
@@ -96,7 +106,11 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- 신청서 -->
                     <div class="tab-pane fade" id="apply">
+
+                        <!-- 레벨 -->
                         <h6 style="margin-top: 50px">레벨</h6>
                         <hr/>
                         <div class="btn-group" role="group" aria-label="Basic example">
@@ -104,6 +118,8 @@
                             <button type="button" class="btn btn-secondary">초/중급자</button>
                             <button type="button" class="btn btn-secondary">고급자</button>
                         </div>
+
+                        <!-- 경력 -->
                         <h6 style="margin-top: 50px">경력</h6>
                         <hr/>
                         <div class="form-group">
@@ -115,21 +131,22 @@
                                 <option>3년이상</option>
                             </select>
                         </div>
+
+                        <!-- 튜터에게 전하는 말 -->
                         <h6 style="margin-top: 50px">튜터에게 전하는 말</h6>
                         <hr/>
                         <div class="form-group">
                             <textarea class="form-control" id="exampleTextarea" rows="3" style="background-color: white"></textarea>
                         </div>
+
+                        <!-- 제출버튼 -->
                         <a href="/">
                             <button type="submit" style="margin-top: 20px" class="btn btn-primary" onclick="alert('신청되었습니다.');">Submit</button>
                         </a>
-
                     </div>
-
                 </div>
             </div>
         </div>
-
     </div>
 
 {% endblock %}

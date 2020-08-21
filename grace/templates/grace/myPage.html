@@ -1,3 +1,4 @@
+<!-- 마이 페이지 -->
 {% extends 'grace/navbar.html' %}
 {% load static %}
 
@@ -7,6 +8,8 @@
     <hr/>
 
     <div class="row" style="margin-bottom: 2rem;">
+
+        <!-- 회원 프로필 사진 -->
         <div class="col-lg-3" >
             <div class="card mb-3">
                 <h4 class="card-header">{{ user }} 님</h4>
@@ -21,9 +24,15 @@
                 </div>
             </div>
         </div>
+
+        <!-- 회원 정보 -->
         <div class="col-lg-8" style="margin-left: 50px; margin-top: 20px">
+
+            <!-- 인사말 -->
             <h5>{{ user }}님 안녕하세요!
                 <br/><strong>GRACE</strong>를 통해 지식을 공유하고, 더 나은 내일을 만들어 보세요.</h5>
+
+            <!-- 회원 정보 탭 -->
             <div class="jumbotron" style="padding:20px; margin-top: 30px">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
@@ -33,6 +42,8 @@
                         <a class="nav-link" data-toggle="tab" href="#info">내정보</a>
                     </li>
                 </ul>
+
+                <!-- 수강 중인 강좌 -->
                 <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade show active" id="lecture">
                         <p style="padding-top: 20px">
@@ -54,10 +65,11 @@
                                 <th scope="row">건강</th>
                                 <td colspan="3">PT</td>
                             </tr>
-
                             </tbody>
                         </table>
                     </div>
+
+                    <!-- 회원 정보 수정 -->
                     <div class="tab-pane fade" id="info">
                         <form>
                             <fieldset>
@@ -70,7 +82,6 @@
                                     <span class="badge badge-light" style="margin-top: 10px">내 소개</span>
                                     <br><br><textarea class="form-control" placeholder="GRACE를 통해 지식을 공유하고, 더 나은 내일을 만들어 보세요." id="exampleTextarea" rows="3" style="background-color: white"></textarea>
                                 </div>
-
                                 <center>
                                     <button type="submit" class="btn btn-primary" onclick="alert('저장되었습니다.');">저장</button>
                                 </center>
@@ -81,8 +92,6 @@
             </div>
         </div>
     </div>
-
-
 
 
 {% endblock %}

@@ -1,3 +1,4 @@
+<!-- 메뉴바(헤더) -->
 <!DOCTYPE html>
 {% load static %}
 <html lang="ko">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="{% static 'grace/_assets/css/custom.min.css' %}">
 </head>
 <body>
+<!-- 메뉴바 -->
 <div class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
     <div class="container">
         <a href="../" class="navbar-brand">Grace</a>
@@ -19,6 +21,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav">
+
+                <!-- 카테고리 -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">카테고리<span class="caret"></span></a>
                     <div class="dropdown-menu" aria-labelledby="themes">
@@ -33,9 +37,14 @@
                         <a class="dropdown-item" href="/category/baking/">요리/베이킹</a>
                     </div>
                 </li>
+
+                <!-- 튜터등록 -->
                 <li class="nav-item">
                     <a class="nav-link" href="/tutor/">튜터등록</a>
                 </li>
+
+                <!-- 마이페이지 -->
+                <!-- 로그인이 되어있을 경우에 접근 가능 -->
                 <li class="nav-item">
                     {% if user.is_authenticated %}
                         <a class="nav-link" href="/myPage/">마이페이지</a>
@@ -43,6 +52,9 @@
                         <a class="nav-link" href="/" onclick="alert('로그인하세요.');">마이페이지</a>
                     {% endif %}
                 </li>
+
+                <!-- 로그인 -->
+                <!-- 로그인된 상태에는 로그아웃, 로그아웃 상태에서는 로그인으로 바뀜 -->
                 <li class="nav-item-login">
                     {% if user.is_authenticated %}
                         <a class="nav-link" href="/logout/">로그아웃</a>
@@ -51,15 +63,14 @@
                     {% endif %}
                 </li>
             </ul>
-
         </div>
     </div>
 </div>
 
 <div class="container">
 
+    <!-- content -->
     <div class="row">
-
         <div class="col-md" id="main_div">
             {% block content %}
             {% endblock %}

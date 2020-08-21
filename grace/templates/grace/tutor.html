@@ -1,12 +1,14 @@
+<!-- 튜터 등록 페이지 -->
 {% extends 'grace/navbar.html' %}
 {% load static %}
 
 {% block content %}
 
-
     <h1>튜터 등록</h1>
     <hr/>
+
     <div class="jumbotron" style="padding:20px; margin-top: 30px">
+        <!-- 튜터 등록 Form -->
         <form>
             <fieldset>
                 <div class="form-group row">
@@ -39,7 +41,6 @@
                     <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="인스타그램, 페이스북 등" style="background-color: white"></textarea>
                 </div>
                 <hr/>
-
                 <div class="form-group" style="margin-top: 50px">
                     <label for="exampleSelect1">수업분야</label>
                     <select class="form-control" id="exampleSelect1" style="background-color: white">
@@ -56,13 +57,11 @@
                     <label for="exampleInputFile">추가로 원하는 수업분야</label>
                     <input type="email" class="form-control"  aria-describedby="emailHelp" style="background-color: white">
                 </div>
+
+                <!-- 제출 버튼 -->
                 <button type="submit" class="btn btn-primary"  style="margin-bottom: 30px" onclick="alert('제출되었습니다.');">Submit</button>
             </fieldset>
         </form>
     </div>
-
-
-
-
 
 {% endblock %}
