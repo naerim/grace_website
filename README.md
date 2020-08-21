@@ -74,5 +74,6 @@ Apply
 Credit
 ---
 2020 여름방학 Programming GURU(GURU-01) <br/>
+구루1 HTML 15조 <br/>
 GitHub @naerim @Hwang @HeejinLim06 @leeyuhyun @pyomin
 
